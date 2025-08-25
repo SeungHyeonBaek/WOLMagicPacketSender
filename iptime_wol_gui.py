@@ -126,7 +126,7 @@ class App(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("WOL Magic Packet Sender")
-        self.geometry("520x400")
+        self.geometry("620x400")  # Increased width from 520 to 620
         self.resizable(False, False)
 
         self.cfg = load_config()
@@ -141,14 +141,14 @@ class App(tk.Tk):
         self.var_mac = tk.StringVar(value=self.cfg.get("mac", ""))
 
         row = 0
-        ttk.Label(frm, text="Target Address").grid(row=row, column=0, sticky="w")
-        ttk.Entry(frm, textvariable=self.var_router_ip, width=46).grid(row=row, column=1, sticky="we")
+        ttk.Label(frm, text="Target Address (e.g. http://192.168.0.1/)").grid(row=row, column=0, sticky="w")
+        ttk.Entry(frm, textvariable=self.var_router_ip, width=50).grid(row=row, column=1, sticky="we")
         row += 1
         ttk.Label(frm, text="WOL Port (default 7,9)").grid(row=row, column=0, sticky="w")
         ttk.Entry(frm, textvariable=self.var_port, width=10).grid(row=row, column=1, sticky="w")
         row += 1
         ttk.Label(frm, text="MAC Address (AA:BB:CC:DD:EE:FF)").grid(row=row, column=0, sticky="w")
-        ttk.Entry(frm, textvariable=self.var_mac, width=46).grid(row=row, column=1, sticky="we")
+        ttk.Entry(frm, textvariable=self.var_mac, width=50).grid(row=row, column=1, sticky="we")
         row += 1
 
         # Execute/Save buttons
@@ -302,6 +302,3 @@ class PingDialog(tk.Toplevel):
 if __name__ == "__main__":
     app = App()
     app.mainloop()
-
-
-

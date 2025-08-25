@@ -1,1 +1,3 @@
-# iptimeWOL
+# WOLMagicPacketSender
+
+Magic Packet Sender

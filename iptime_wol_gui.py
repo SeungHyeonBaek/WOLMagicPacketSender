@@ -144,7 +144,7 @@ class App(tk.Tk):
         ttk.Label(frm, text="Router/Target Address (e.g. http://192.168.0.1/)").grid(row=row, column=0, sticky="w")
         ttk.Entry(frm, textvariable=self.var_router_ip, width=46).grid(row=row, column=1, sticky="we")
         row += 1
-        ttk.Label(frm, text="WOL Port (default 7,9").grid(row=row, column=0, sticky="w")
+        ttk.Label(frm, text="WOL Port (default 7,9)").grid(row=row, column=0, sticky="w")
         ttk.Entry(frm, textvariable=self.var_port, width=10).grid(row=row, column=1, sticky="w")
         row += 1
         ttk.Label(frm, text="MAC Address (AA:BB:CC:DD:EE:FF)").grid(row=row, column=0, sticky="w")
@@ -302,4 +302,5 @@ class PingDialog(tk.Toplevel):
 if __name__ == "__main__":
     app = App()
     app.mainloop()
+
 
